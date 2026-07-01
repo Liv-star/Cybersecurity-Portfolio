@@ -3,7 +3,7 @@
 ## Project Overview
 
 - **Analyst:** Praise Olivia Mazana
-- **Date:** 23 June 2026
+- **Date:** 1 July 2026
 - **Tool:** Nmap 7.94SVN
 - **Objective:** Perform network reconnaissance by identifying active hosts, open ports, running services, and potential security risks on a local network.
 - **Scope:** 192.168.1.0/24
