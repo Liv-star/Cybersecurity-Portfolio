@@ -16,12 +16,12 @@ Perform a network scan to identify open ports and services using Nmap.
 
 ## 🪜 Methodology
 
-**1. Install Nmap**
+## 1. Install Nmap
 ```bash
 sudo apt install nmap
-**2. Perform Network Scan**
+## 2. Perform Network Scan
 nmap -sV 192.168.1.76/24 -oN nmap_scan_results.txt
-**3. Analysis Process**
+## 3. Analysis Process
 Identify active hosts
 Detect open ports
 Map services and versions
@@ -30,7 +30,7 @@ Assess exposure risks
 
 The Nmap scan identified multiple active devices within the local network.
 
-
+---
 
 | **Host** | **IP Address** | **Open Ports** | **Services & Versions** |
 | --- | --- | --- | --- |
@@ -39,6 +39,7 @@ The Nmap scan identified multiple active devices within the local network.
 | olivia-Lenovo-ideapad-130-15IKB.home | 192.168.1.76 | 21, 80, 443, 3306 | ProFTPD, Apache httpd 2.4.58 (OpenSSL/1.1.1w, PHP/8.0.30, mod_perl/2.0.12, Perl/v5.34.1), MariaDB (unauthorized) |
 | Streaming Device | 192.168.1.102 | 8008, 8009, 8443, 9000 | HTTP?, Ninja Sphere Chromecast driver (ssl/castv2), HTTPS-alt?, SSL cslistener |
 
+---
 
 ⚠️ Risk Matrix
 | Device | Critical | High | Medium | Unknown |
@@ -49,6 +50,7 @@ The Nmap scan identified multiple active devices within the local network.
 | Streaming Device | 0 | 0 | 3 (HTTP?, SSL services) | 1 (Unclear ports) |
 | Secure Host | 0 | 0 | 0 | 0 |
 
+---
 
 🧩 Priority Actions
 🔴 Immediate
