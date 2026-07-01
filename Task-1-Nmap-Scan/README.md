@@ -3,9 +3,10 @@
 ## Project Overview
 
 - **Analyst:** Praise Olivia Mazana
+- **Date:** 23 June 2026
 - **Tool:** Nmap 7.94SVN
-- **Objective:** Discover active hosts, identify open ports, and assess potential security risks within a local network.
-- **Scope:** Local network (192.168.1.0/24)
+- **Objective:** Perform network reconnaissance by identifying active hosts, open ports, running services, and potential security risks on a local network.
+- **Scope:** 192.168.1.0/24
 
 ---
 
@@ -21,24 +22,24 @@ nmap -sV 192.168.1.76/24 -oN nmap_scan_results.txt
 
 | File | Description |
 |------|-------------|
-| `nmap_scan_results.txt` | Raw Nmap scan output |
-| `security_analysis.md` | Detailed security analysis and recommendations |
-| `screenshots/` | Scan screenshots |
+| nmap_scan_results.txt | Raw Nmap scan results |
+| security_analysis.md | Detailed security assessment |
+| screenshots/ | Screenshots of the scan |
 
 ---
 
 ## Executive Summary
 
-The scan identified **four active devices** on the network.
+The network scan discovered **four active devices** on the local network.
 
-| Device | Description | Overall Risk |
-|---------|-------------|--------------|
-| Device 1 | Windows System | High |
-| Device 2 | Linux Web Server | High |
-| Device 3 | Media / Streaming Device | Medium |
-| Device 4 | Secure Host | Low |
+### Device Summary
 
-The assessment revealed several services that require attention, including SMB, FTP, and an externally accessible database service.
+| Device | Description | Risk |
+|---------|-------------|------|
+| 192.168.1.75 | Windows System | High |
+| 192.168.1.76 | Linux Web Server | High |
+| 192.168.1.102 | Media / Streaming Device | Medium |
+| 192.168.1.130 | Secure Host | Low |
 
 ---
 
@@ -46,19 +47,19 @@ The assessment revealed several services that require attention, including SMB, 
 
 ### Critical Risks
 
-- SMB (Port 445) exposed on Windows system
-- MySQL (Port 3306) exposed on web server
+- SMB (Port 445) exposed on Windows host
+- MySQL (Port 3306) exposed on Linux server
 
 ### High Risks
 
 - Microsoft RPC (Port 135)
-- FTP using plaintext authentication
+- FTP (Port 21)
 
 ### Medium Risks
 
-- HTTP service
-- HTTPS management interface
-- Chromecast-related services
+- HTTP (Port 80)
+- HTTPS (Port 443)
+- Chromecast services
 
 ### Unknown Services
 
@@ -67,35 +68,24 @@ The assessment revealed several services that require attention, including SMB, 
 
 ---
 
-## Recommendations
-
-- Disable SMBv1 and secure SMB access.
-- Restrict MySQL to localhost.
-- Replace FTP with SFTP or FTPS.
-- Keep all operating systems and services updated.
-- Investigate unknown services.
-- Enable continuous monitoring and logging.
-
----
-
 ## Skills Demonstrated
 
 - Network Discovery
 - Service Enumeration
-- Port Scanning
+- Version Detection
 - Security Assessment
-- Risk Analysis
 - Vulnerability Identification
+- Risk Analysis
 - Technical Documentation
 
 ---
 
 ## Screenshots
 
-Screenshots of the scan are available in the `screenshots` folder.
+Screenshots are located inside the **screenshots** folder.
 
 ---
 
 ## Conclusion
 
-This assessment demonstrates the use of Nmap for identifying exposed services, evaluating security risks, and recommending mitigation strategies to improve the security posture of a local network.
+This project demonstrates the use of Nmap for network discovery, service enumeration, and security assessment. The scan identified several exposed services that should be secured to reduce the network's attack surface.
