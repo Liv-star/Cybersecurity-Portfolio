@@ -85,7 +85,7 @@ The Nmap scan identified multiple active devices within the local network.
 
 ### 🧠 Overall Assessment
 
-# Risk Level: HIGH
+## Risk Level: HIGH
 
     Router exposes legacy insecure services
 
