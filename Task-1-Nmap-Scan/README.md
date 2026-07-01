@@ -1,18 +1,17 @@
-# Task 1 – Nmap Network Scan
+# Task 1: Basic Network Scanning with Nmap
 
 ## Objective
+To perform a network scan on a local machine to identify open ports and running services using Nmap.
 
-Perform network reconnaissance using Nmap to identify active hosts and open ports.
+## Methodology
 
-## Tools
+### Tools Used
+- **Nmap Version:** 7.94SVN
+- **Operating System:** Linux (x86_64)
 
-- Nmap
-- Linux mint
-
-## Files
-
-- nmap_scan_results.txt
-- screenshots/
+### Scan Command
+```bash
+nmap -sV 192.168.1.76/24 -oN nmap_scan_results.txt
 
 ## Summary
 
