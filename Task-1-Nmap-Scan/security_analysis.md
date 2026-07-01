@@ -16,7 +16,7 @@ Perform a network scan to identify open ports and services using Nmap.
 
 ## 🪜 Methodology
 
-### 1. Install Nmap
+ 1. Install Nmap
 Install Nmap using your package manager:
 
 ```bash
