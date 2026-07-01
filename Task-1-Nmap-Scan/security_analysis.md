@@ -26,7 +26,7 @@ Perform a network scan to identify open ports and services using Nmap.
 
         Assess exposure risks
    
-📊 Scan Summary
+## 📊 Scan Summary
 
 The Nmap scan identified multiple active devices within the local network.
 
@@ -41,7 +41,7 @@ The Nmap scan identified multiple active devices within the local network.
 
 ---
 
-⚠️ Risk Matrix
+## ⚠️ Risk Matrix
 | Device | Critical | High | Medium | Unknown |
 | --- | --- | --- | --- | --- |
 | Windows Host | 1 (SMB 445) | 1 (RPC exposure) | 1 (NetBIOS) | 1 (Port 2968 unknown) |
@@ -52,8 +52,8 @@ The Nmap scan identified multiple active devices within the local network.
 
 ---
 
-🧩 Priority Actions
-🔴 Immediate
+## 🧩 Priority Actions
+### 🔴 Immediate
 
     Secure SMB (445) on Windows and Linux systems
 
@@ -63,7 +63,7 @@ The Nmap scan identified multiple active devices within the local network.
 
     Investigate port 2968
 
-🟠 Short Term
+### 🟠 Short Term
 
     Replace FTP with SFTP/SSH
 
@@ -73,7 +73,7 @@ The Nmap scan identified multiple active devices within the local network.
 
     Update all systems
 
-🟢 Long Term
+### 🟢 Long Term
 
     Continuous vulnerability scanning
 
@@ -83,9 +83,9 @@ The Nmap scan identified multiple active devices within the local network.
 
     Regular patch management
 
-🧠 Overall Assessment
+### 🧠 Overall Assessment
 
-Risk Level: HIGH
+# Risk Level: HIGH
 
     Router exposes legacy insecure services
 
