@@ -1,34 +1,31 @@
-# Security Analysis
-
-## Scan Summary
-
- # 🔒 Security Analysis — Basic Network Scanning with Nmap
+# 🔒 Security Analysis — Basic Network Scanning with Nmap
 
 ## 🎯 Objective
 Perform a network scan to identify open ports and services using Nmap.
 
----
-
-## 🧰 Tools Used
+## 🧰 Tools
 - Nmap (Network Mapper)
 
----
+## 🪜 Steps
+1. Install Nmap:
+   ```bash
+   sudo apt install nmap
 
-## 🪜 Methodology
+    Perform a scan:
+    bash
 
-## 1. Install Nmap
-```bash
-sudo apt install nmap
+    nmap -sV 192.168.1.76/24 -oN nmap_scan_results.txt
 
-## 2. Perform Network Scan
+    Analysis process:
 
-```bash
-nmap -sV 192.168.1.76/24 -oN nmap_scan_results.txt
-## 3. Analysis Process
-Identify active hosts
-Detect open ports
-Map services and versions
-Assess exposure risks
+        Identify active hosts
+
+        Detect open ports
+
+        Map services and versions
+
+        Assess exposure risks
+   
 📊 Scan Summary
 
 The Nmap scan identified multiple active devices within the local network.
