@@ -10,7 +10,7 @@ The Nmap scan identified four active devices within the local network.
 | Farai.home (Windows) | 192.168.1.75 | 135, 139, 445, 2968 | Microsoft RPC, NetBIOS-SSN, Microsoft-DS?, enpp? |
 | olivia-Lenovo-ideapad-130-15IKB.home | 192.168.1.76 | 21, 80, 443, 3306 | ProFTPD, Apache httpd 2.4.58 (OpenSSL/1.1.1w, PHP/8.0.30, mod_perl/2.0.12, Perl/v5.34.1), MariaDB (unauthorized) |
 | Device | 192.168.1.102 | 8008, 8009, 8443, 9000 | HTTP?, Ninja Sphere Chromecast driver (ssl/castv2), HTTPS-alt?, SSL cslistener |
-| Device | 192.168.1.130 | None | All 1000 ports closed (conn-refused) |
+
 
 # Risk Matrix
 
