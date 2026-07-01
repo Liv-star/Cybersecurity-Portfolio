@@ -19,7 +19,9 @@ Perform a network scan to identify open ports and services using Nmap.
 ## 1. Install Nmap
 ```bash
 sudo apt install nmap
+
 ## 2. Perform Network Scan
+```bash
 nmap -sV 192.168.1.76/24 -oN nmap_scan_results.txt
 ## 3. Analysis Process
 Identify active hosts
