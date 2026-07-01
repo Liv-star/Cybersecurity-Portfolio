@@ -30,12 +30,15 @@ Assess exposure risks
 
 The Nmap scan identified multiple active devices within the local network.
 
+
+
 | **Host** | **IP Address** | **Open Ports** | **Services & Versions** |
 | --- | --- | --- | --- |
 | EMG3525-T50B (Linux Router) | 192.168.1.1 | 21, 22, 23, 53, 80 (filtered), 139, 161, 443, 445, 2601, 2602, 8443, 49152, 49153 | Pure-FTPd, Dropbear SSH 2018.76, BusyBox Telnetd, dnsmasq 2.67, Samba smbd 3.X–4.X, SNMP, HTTPS, Quagga routing, UPnP SDK 1.6.18 |
 | Farai.home (Windows Host) | 192.168.1.75 | 135, 139, 445, 2968 | Microsoft RPC, NetBIOS-SSN, Microsoft-DS?, enpp? |
 | olivia-Lenovo-ideapad-130-15IKB.home | 192.168.1.76 | 21, 80, 443, 3306 | ProFTPD, Apache httpd 2.4.58 (OpenSSL/1.1.1w, PHP/8.0.30, mod_perl/2.0.12, Perl/v5.34.1), MariaDB (unauthorized) |
 | Streaming Device | 192.168.1.102 | 8008, 8009, 8443, 9000 | HTTP?, Ninja Sphere Chromecast driver (ssl/castv2), HTTPS-alt?, SSL cslistener |
+
 
 ⚠️ Risk Matrix
 | Device | Critical | High | Medium | Unknown |
@@ -45,6 +48,8 @@ The Nmap scan identified multiple active devices within the local network.
 | Personal Laptop | 1 (MariaDB open) | 1 (FTP) | 1 (Apache exposure) | 0 |
 | Streaming Device | 0 | 0 | 3 (HTTP?, SSL services) | 1 (Unclear ports) |
 | Secure Host | 0 | 0 | 0 | 0 |
+
+
 🧩 Priority Actions
 🔴 Immediate
 Secure SMB (445) on Windows and Linux systems
