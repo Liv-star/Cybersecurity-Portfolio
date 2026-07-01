@@ -54,26 +54,45 @@ The Nmap scan identified multiple active devices within the local network.
 
 🧩 Priority Actions
 🔴 Immediate
-Secure SMB (445) on Windows and Linux systems
-Restrict MariaDB (3306) on laptop
-Disable Telnet (23) and FTP (21) on router
-Investigate port 2968
+
+    Secure SMB (445) on Windows and Linux systems
+
+    Restrict MariaDB (3306) on laptop
+
+    Disable Telnet (23) and FTP (21) on router
+
+    Investigate port 2968
+
 🟠 Short Term
-Replace FTP with SFTP/SSH
-Harden Apache (disable unused modules, enforce TLS)
-Restrict SNMP and UPnP
-Update all systems
+
+    Replace FTP with SFTP/SSH
+
+    Harden Apache (disable unused modules, enforce TLS)
+
+    Restrict SNMP and UPnP
+
+    Update all systems
+
 🟢 Long Term
-Continuous vulnerability scanning
-Security monitoring system
-Network segmentation
-Regular patch management
+
+    Continuous vulnerability scanning
+
+    Security monitoring system
+
+    Network segmentation
+
+    Regular patch management
+
 🧠 Overall Assessment
 
 Risk Level: HIGH
 
-Router exposes legacy insecure services
-Windows host exposes SMB + RPC
-Laptop has exposed database service
-Streaming device has unclear SSL services
-Network needs segmentation urgently
+    Router exposes legacy insecure services
+
+    Windows host exposes SMB + RPC
+
+    Laptop has exposed database service
+
+    Streaming device has unclear SSL services
+
+    Network needs segmentation urgently
