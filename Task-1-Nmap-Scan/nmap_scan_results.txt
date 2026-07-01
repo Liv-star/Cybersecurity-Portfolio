@@ -1,1 +1,75 @@
 
+valid_lft forever preferred_lft forever
+olivia@olivia-Lenovo-ideapad-130-15IKB:~$ nmap -sV 192.168.1.76/24 -oN nmap_scan_results.txt
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-06-23 22:15 SAST
+Nmap scan report for home (192.168.1.1)
+Host is up (0.00096s latency).
+Not shown: 986 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE     VERSION
+21/tcp    open     ftp         Pure-FTPd
+22/tcp    open     ssh         Dropbear sshd 2018.76 (protocol 2.0)
+23/tcp    open     telnet      BusyBox telnetd
+53/tcp    open     domain      dnsmasq 2.67
+80/tcp    filtered http
+139/tcp   open     netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+161/tcp   open     snmp?
+443/tcp   open     ssl/https
+445/tcp   open     netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+2601/tcp  open     zebra       Quagga routing software
+2602/tcp  open     zebra       Quagga routing software
+8443/tcp  open     https-alt
+49152/tcp open     upnp        Portable SDK for UPnP devices 1.6.18 (Linux 3.18.21; UPnP 1.0)
+49153/tcp open     upnp        Portable SDK for UPnP devices 1.6.18 (Linux 3.18.21; UPnP 1.0)
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.94SVN%T=SSL%I=7%D=6/23%Time=6A3AE98B%P=x86_64-pc-linux-
+SF:gnu%r(RTSPRequest,68A,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20text/
+SF:html\r\nCache-Control:\x20no-cache\r\nLast-Modified:\x20Wed,\x2012\x20F
+SF:eb\x202020\x2016:55:46\x20GMT\r\nContent-Length:\x201422\r\nDate:\x20Tu
+SF:e,\x2023\x20Jun\x202026\x2020:16:06\x20GMT\r\nX-Frame-Options:\x20sameo
+SF:rigin\r\nContent-Security-Policy:\x20frame-ancestors\x20'self'\r\n\r\n<
+SF:!DOCTYPE\x20html><html><head><meta\x20charset=utf-8><meta\x20http-equiv
+SF:=Cache-Control\x20content=no-store><meta\x20http-equiv=cache-control\x2
+SF:0content=no-cache><meta\x20http-equiv=cache-control\x20content=\"max-ag
+SF:e=0\"><meta\x20name=viewport\x20content=\"width=device-width,initial-sc
+SF:ale=1,minimum-scale=1,maximum-scale=1\"><title>\.:Welcome\x20to\x20the
+SF:\x20Web-Based\x20Configurator:\.</title><link\x20rel=stylesheet\x20hre
+SF:f=\./static/plugins/bootstrap-4\.0\.0/bootstrap\.min\.css><link\x20rel=
+SF:stylesheet\x20href=\./static/plugins/glyphicons/glyphicons\.css><link\x
+SF:20type=text/css\x20href=\./static/plugins/zyxel-icon/styles\.css><link\
+SF:20rel=stylesheet><link\x20rel=stylesheet\x20href=\./static/css/layout\.
+SF:css><link\x20rel=stylesheet\x20hre");
+Service Info: Host: EMG3525-T50B; OS: Linux; CPE: cpe:/o:linux:linux_kernel, cpe:/o:linux:linux_kernel:3.18.21
+
+Nmap scan report for Farai.home (192.168.1.75)
+Host is up (0.0017s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT    STATE SERVICE      VERSION
+135/tcp open  msrpc        Microsoft Windows RPC
+139/tcp open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds?
+2968/tcp open  enpp?
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for olivia-Lenovo-ideapad-130-15IKB.home (192.168.1.76)
+Host is up (0.000063s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT     STATE SERVICE  VERSION
+21/tcp   open  ftp      ProFTPD
+80/tcp   open  http     Apache httpd 2.4.58 ((Unix) OpenSSL/1.1.1w PHP/8.0.30 mod_perl/2.0.12 Perl/v5.34.1)
+443/tcp  open  ssl/http Apache httpd 2.4.58 ((Unix) OpenSSL/1.1.1w PHP/8.0.30 mod_perl/2.0.12 Perl/v5.34.1)
+3306/tcp open  mysql    MariaDB (unauthorized)
+
+Nmap scan report for 192.168.1.102
+Host is up (0.081s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT     STATE SERVICE      VERSION
+8008/tcp open  http?
+8009/tcp open  ssl/castv2   Ninja Sphere Chromecast driver
+8443/tcp open  ssl/https-alt?
+9000/tcp open  ssl/cslistener?
+
+Nmap scan report for 192.168.1.130
+Host is up (0.023s latency).
+All 1000 scanned ports on 192.168.1.130 are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
