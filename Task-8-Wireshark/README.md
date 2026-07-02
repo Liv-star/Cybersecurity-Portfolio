@@ -1,12 +1,10 @@
 # Network Traffic Capture with Wireshark
 
-## Project Information
-
-**Task:** Capture Network Traffic with Wireshark
+**Task:** Task 8 – Capture Network Traffic with Wireshark
 
 **Analyst:** Praise Olivia Mazana
 
-**Tool Used:** Wireshark
+**Tool:** Wireshark
 
 **Operating System:** Ubuntu Linux
 
@@ -14,21 +12,22 @@
 
 # Objective
 
-The objective of this project was to capture live network traffic using Wireshark, filter HTTP packets, and analyze the captured network communication.
+The objective of this task was to install Wireshark, capture live network traffic on a local network, filter HTTP packets, and analyze the captured data.
 
 ---
 
 # Tools Used
 
-- Wireshark
 - Ubuntu Linux
-- Web Browser (Firefox)
+- Wireshark
+- Firefox Web Browser
+- Wireless Network Interface (wlp2s0)
 
 ---
 
 # Installing Wireshark
 
-Update the package list:
+Update the package repository:
 
 ```bash
 sudo apt update
@@ -46,58 +45,97 @@ Verify installation:
 wireshark --version
 ```
 
+Launch Wireshark:
+
+```bash
+wireshark
+```
+
 ---
 
 # Capturing Network Traffic
 
-1. Open Wireshark.
-2. Select the active network interface.
-3. Start packet capture.
-4. Generate network traffic by browsing websites.
-5. Stop the capture after sufficient packets have been collected.
+The following steps were performed:
+
+1. Opened Wireshark.
+2. Selected the wireless interface **wlp2s0**.
+3. Started packet capture.
+4. Generated network traffic by browsing websites.
+5. Allowed Wireshark to capture packets.
+6. Stopped the capture after sufficient traffic had been collected.
+7. Saved the capture as:
+
+```
+wireshark_capture.pcap
+```
 
 ---
 
 # Filtering HTTP Traffic
 
-To display only HTTP packets, use the following display filter:
+After capturing traffic, the following display filter was applied:
 
 ```
 http
 ```
 
-If HTTP traffic is unavailable because most websites use HTTPS, capture traffic from a local web server or use the following filters:
-
-```
-tcp.port == 80
-```
-
-or
-
-```
-http.request
-```
+This filter displays only HTTP packets, making it easier to analyze web traffic.
 
 ---
 
 # Packet Analysis
 
-The captured HTTP packets contained:
+The captured HTTP packets contained the following information:
 
 - Source IP Address
 - Destination IP Address
 - Source Port
 - Destination Port
 - HTTP GET Requests
-- HTTP Response Codes
+- HTTP/1.1 Responses
 - Packet Length
 - Time Stamps
 
-Example observations:
+One of the captured packets showed:
 
-- Client initiated an HTTP GET request.
-- Server responded with an HTTP 200 OK message.
-- Communication occurred over TCP Port 80.
+```
+Request Method: GET
+
+Protocol: HTTP/1.1
+
+Destination Port: 80
+
+Connection: close
+```
+
+Several responses returned:
+
+```
+HTTP/1.1 204 No Content
+```
+
+This indicates that the web server successfully processed the request but did not return any content.
+
+---
+
+# Screenshots
+
+The repository includes the following screenshots:
+
+```
+screenshots/
+│
+├── capture_started.png
+├── http_filter.png
+```
+
+### Screenshot 1
+
+Packet capture running on interface **wlp2s0**.
+
+### Screenshot 2
+
+HTTP display filter applied, showing HTTP GET requests and HTTP responses.
 
 ---
 
@@ -106,25 +144,25 @@ Example observations:
 ```
 README.md
 wireshark_capture.pcap
-video
+screenshots/
 ```
 
 ---
 
 # Learning Outcomes
 
-During this project I learned how to:
+This project provided practical experience in:
 
-- Install Wireshark.
-- Capture live network traffic.
-- Identify active network interfaces.
-- Filter packets using display filters.
-- Analyze HTTP requests and responses.
-- Interpret packet details including source and destination addresses.
-- Save packet captures for future analysis.
+- Installing Wireshark
+- Capturing live network traffic
+- Selecting the correct network interface
+- Using display filters
+- Analyzing HTTP packets
+- Identifying source and destination IP addresses
+- Understanding HTTP request and response communication
 
 ---
 
 # Conclusion
 
-This exercise demonstrated the use of Wireshark as a powerful network protocol analyzer. Capturing and filtering HTTP traffic provided insight into how clients and servers communicate across a network and reinforced the importance of packet analysis in cybersecurity investigations.
+This project successfully demonstrated how to capture and analyze network traffic using Wireshark. HTTP traffic was filtered using the **http** display filter, allowing examination of HTTP GET requests and server responses. Packet analysis is an essential skill in cybersecurity because it helps analysts troubleshoot network issues, investigate incidents, and detect suspicious activity.
