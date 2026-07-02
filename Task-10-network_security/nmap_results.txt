@@ -1,1 +1,17 @@
+Starting Nmap 7.94SVN at 2026-06-23
 
+Nmap scan report for 10.0.0.1
+Host is up (0.0020s latency).
+
+PORT    STATE SERVICE
+53/tcp  open  domain
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 10.0.0.182
+Host is up.
+
+PORT   STATE SERVICE
+22/tcp open ssh
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 8.42 seconds
