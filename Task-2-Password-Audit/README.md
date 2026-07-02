@@ -12,49 +12,34 @@ Set up a basic firewall using UFW (Uncomplicated Firewall) on a Linux system to 
    ```bash
    sudo apt update
    sudo apt install ufw -y
+2. **Set Default Policies**
 
-    Set Default Policies
+    Deny all incoming connections
+    Allow all outgoing connections
+   
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
 
-        Deny all incoming connections
+3. **Allow SSH (Port 22)**
+bash
 
-        Allow all outgoing connections
-    bash
+sudo ufw allow ssh
 
-    sudo ufw default deny incoming
-    sudo ufw default allow outgoing
+4. **Deny HTTP (Port 80)**
+bash
 
-    Allow SSH (Port 22)
-    bash
+sudo ufw deny http
 
-    sudo ufw allow ssh
+5. **Enable Firewall**
+bash
 
-    Deny HTTP (Port 80)
-    bash
+sudo ufw enable
+6. **Verify Status**
+bash
 
-    sudo ufw deny http
-
-    Enable Firewall
-    bash
-
-    sudo ufw enable
-
-    Verify Status
-    bash
-
-    sudo ufw status verbose
-
-Verification
-
-The firewall status should show:
-
-    SSH (22/tcp) allowed
-
-    HTTP (80/tcp) denied
-
-    Default policy: deny incoming, allow outgoing
-
-Example output:
-Code
+sudo ufw status verbose
+# Verification
+### Example output:
 
 Status: active
 Logging: on (low)
@@ -66,3 +51,5 @@ To                         Action      From
 80/tcp                     DENY IN     Anywhere
 22/tcp (v6)                ALLOW IN    Anywhere (v6)
 80/tcp (v6)                DENY IN     Anywhere (v6)
+
+
